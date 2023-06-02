@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container"></div>
+        <nav>
+            <img src="images/r.jpeg" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Front-End engineer</p>
+            <h1>Hello,I'm <span>Rishitha</span><br>Goshika From India</h1>
+        </div>
+    </div>
+    <!---about         --------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+           <div class="about-col-1">
+                <img src="images/background.jpeg">  
+           </div>
+            <div class="about-col-2">
+                 <h1 class="sub-title" >About me</h1>
+                 <p style="color:aliceblue;">
+                    I am a 3rd year engineering graduate
+                     from sreenidhi institute of science
+                      and technology with specialisation
+                       in information technology.I am passionate about development
+                 </p>
+                 <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">experience</p>
+                    <p class="tab-links"onclick="opentab('education')">education</p>
+                </div>
+                 <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Designing web/app interfaces</li>
+                        <li><span>Good at C,C++,Java</span><br>sound knowledge about programming languages</li>
+                        <li><span>Good at DSA,Problem solving</span><br>solves problem in various websites like leetcode,codechef</li>
+                    </ul>
+
+                 </div>
+                 <div class="tab-contents"id="experience">
+                    <ul>
+                        <li><span>December 2022-Feb 2023</span><br>Data analytics virtual Internship</li>
+                        <li><span>July 2022-sep2022</span><br>AI/ML virtual Internship</li>
+                        <li><span>2021-2022</span><br>cisco virtual internship</li>
+                    </ul>
+
+                 </div>
+                 <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020-current</span><br>Btech from sreenidhi institute of science and technology</li>
+                        <li><span>2018-2022</span><br>Intermediate from Narayana college</li>
+                        <li><span>2017-2018</span><br>10th from word and deed school</li>
+                    </ul>
+
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------------services-->
+<div id="services">
+   <div class="container">
+    <h1 class="sub-title" >My services</h1>
+    <div class="services-list">
+        <div>
+        <h2>Front-End</h2>
+        <p>
+            about Front-end
+        </p>
+        <a href="#">Learnmore</a>
+          </div>
+        <div>
+        <h2>DSA solving</h2>
+        <p>
+            About dsa solving
+        </p>
+        <a href="#">Learnmore</a>
+         </div>
+       <div>
+        <h2>Full stack</h2>
+        <p>
+            About Full stack
+        </p>
+        <a href="#">Learnmore</a>
+       </div>
+    </div>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
